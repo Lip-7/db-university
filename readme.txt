@@ -1,0 +1,2 @@
+Ciao, non so se lo leggerà mai qualcuno, comunque ho ricreato il db in mySQL e vi ho esportato il pdf dello schema. Inoltre ho aggiunto anche uno screenshot visto che nel pdf si vedeva male.
+Se hai letto questo ti auguro un buona giornata e grazie per il tuo tempo, ciaooo!
