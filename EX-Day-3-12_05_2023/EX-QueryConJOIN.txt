@@ -93,6 +93,19 @@ Risposta:
     GROUP BY `students`.`id`;
 
 
+SELECT `students`.`name`, `students`.`surname`, `students`.`id` AS `id_Student`, `courses`.`name` AS `Course_name`, COUNT(`exam_student`.`vote`) AS `Number_of_Attempts`
+FROM `courses`
+JOIN `exams` ON `exams`.`course_id` = `courses`.`id`
+JOIN `exam_student` ON `exam_student`.`exam_id` = `exams`.`id`
+JOIN `students` ON `students`.`id` = `exam_student`.`student_id`
+GROUP BY `students`.`id`, `courses`.`id`;
+
+SELECT `students`.`name`, `students`.`surname`, `students`.`id` AS `id_Student`, `courses`.`name` AS `Course_name`, COUNT(`exam_student`.`vote`) AS `Number_of_Attempts`
+FROM `students`
+JOIN `exam_student` ON `exam_student`.`student_id` = `students`.`id`
+JOIN `exams` ON `exam_student`.`exam_id` = `exams`.`id`
+JOIN `courses` ON `exams`.`course_id` = `courses`.`id`
+GROUP BY `students`.`id`, `courses`.`name`
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
