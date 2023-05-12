@@ -27,7 +27,7 @@ Risposta:
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Quesito:
-    3. Contare quanti corsi di laurea ci sono per ogni dipartimento
+    4. Contare quanti corsi di laurea ci sono per ogni dipartimento
 Risposta:
     SELECT `departments`.`name`, COUNT(`degrees`.`id`) AS `Number_of_Degrees`
     FROM `departments`
