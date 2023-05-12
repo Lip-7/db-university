@@ -67,7 +67,7 @@ Risposta:
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Quesito:
-    6. Selezionare tutti i docenti che insegnano nel Dipartimento di Matematica (54)
+    6. Selezionare tutti i docenti che insegnano nel Dipartimento di Matematica (54) (70!)
 Risposta:
     SELECT `departments`.`name` AS `Department_name`, CONCAT(`teachers`.`name`, ' ',`teachers`.`surname`) AS `teacher`, `teachers`.`id` AS `ID_Teacher`
     FROM `teachers`
@@ -86,6 +86,11 @@ Risposta:
 Quesito:
     7. BONUS: Selezionare per ogni studente quanti tentativi d’esame ha sostenuto per superare ciascuno dei suoi esami
 Risposta:
+    SELECT `students`.`name`, `students`.`surname`, `students`.`id` AS `id_Student`, COUNT(`exam_student`.`vote`) AS `Attempts`
+    FROM `students`
+    JOIN `exam_student`
+    ON `exam_student`.`student_id` = `students`.`id`
+    GROUP BY `students`.`id`;
 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
